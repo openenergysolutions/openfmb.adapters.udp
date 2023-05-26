@@ -1,0 +1,194 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'udp-adapter'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=udp-adapter",
+                    "--package=udp-adapter"
+                ],
+                "filter": {
+                    "name": "udp-adapter",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'udp-adapter'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=udp-adapter",
+                    "--package=udp-adapter"
+                ],
+                "filter": {
+                    "name": "udp-adapter",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'adapter-util'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=adapter-util"
+                ],
+                "filter": {
+                    "name": "adapter-util",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'oes'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "oes",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'listener'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=listener",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "listener",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'listener'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=listener",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "listener",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'turn_off'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=turn_off",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "turn_off",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'turn_off'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=turn_off",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "turn_off",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug example 'turn_on'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--example=turn_on",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "turn_on",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in example 'turn_on'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--example=turn_on",
+                    "--package=oes"
+                ],
+                "filter": {
+                    "name": "turn_on",
+                    "kind": "example"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

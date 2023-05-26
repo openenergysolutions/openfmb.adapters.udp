@@ -1,0 +1,26 @@
+file:
+  id: openfmb-adapter-main
+  edition: 2.0
+  version: 1.0.0.0
+  plugin: ''
+plugins:  
+  oes-plug:
+    enabled: true
+    thread-pool-size: 1
+    session:
+    - path: template.yaml
+      session-name: Session
+      overrides: []
+  zenoh:
+    enabled: true
+    max-queued-messages: 100  # how many messages to buffer before discarding the oldest    
+    connect-retry-seconds: 5  # number of seconds to wait before trying to re-establish a connection to the server
+    publish:
+    - profile: SwitchReadingProfile
+      subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
+    - profile: SwitchStatusProfile
+      subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2
+    subscribe:
+    - profile: SwitchDiscreteControlProfile
+      subject: 5f7436ec-7bf2-4f23-a5c4-fbf25d909ba2 
+...

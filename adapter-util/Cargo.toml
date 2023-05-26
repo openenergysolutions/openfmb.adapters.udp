@@ -1,0 +1,17 @@
+[package]
+name = "adapter-util"
+version = "0.1.0"
+authors = ["Cory Nguyen <cory@openenergysolutionsinc.com>"]
+edition = "2021"
+
+[dependencies]
+openfmb = {git = "https://github.com/openenergysolutions/openfmb-rs.git", branch = "feature/v2.1-testing", features = ["zenoh", "client"]}
+serde = {version = "1.0.124", features = ["derive"] }
+serde_json = "1.0.64"
+serde_yaml = "0.9"
+log = "0.4"
+pretty_env_logger = "0.5"
+chrono = "0.4.10"
+bytes = "1.0.1"
+prost = "0.10.4"
+uuid = { version = "1.1.2", features = ["serde", "v4"] }
