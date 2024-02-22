@@ -8,8 +8,8 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
-openfmb = {git = "https://github.com/openenergysolutions/openfmb-rs.git", branch = "feature/v2.1-testing", features = ["zenoh", "client"]}
-openfmb-messages-ext = {git = "https://github.com/openenergysolutions/openfmb-rs.git", branch = "feature/v2.1-testing"}
+openfmb = {git = "https://github.com/openenergysolutions/openfmb-rs.git", features = ["zenoh", "client"]}
+openfmb-messages-ext = {git = "https://github.com/openenergysolutions/openfmb-rs.git"}
 oes = { path = "../oes" }
 adapter-util = { path = "../adapter-util" }
 serde = {version = "1.0.124", features = ["derive"] }

@@ -295,7 +295,7 @@ pub fn parse_utc_time(s: &str) -> Option<Timestamp> {
         // sample format: 04/10/2021_19:34:06.582
         match NaiveDateTime::parse_from_str(vec[0].trim(), "%m/%d/%Y_%H:%M:%S.%f") {
             Ok(dt) => {
-                let dt = DateTime::<Utc>::from_utc(dt, Utc);
+                let dt = DateTime::from_naive_utc_and_offset(dt, Utc);
                 let mut timestamp = timestamp_from_datetime(dt);
                 timestamp.tq = Some(tq);
                 return Some(timestamp);
