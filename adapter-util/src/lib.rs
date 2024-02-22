@@ -16,16 +16,16 @@ use log::{debug, error};
 use prost::Message;
 use serde_yaml::Value;
 
-pub mod visitors;
+mod visitors;
 pub use visitors::*;
 
-pub mod configuration;
+mod configuration;
 pub use configuration::*;
 
-pub mod adapter_config;
+mod adapter_config;
 pub use adapter_config::*;
 
-pub mod utils;
+mod utils;
 pub use utils::*;
 
 macro_rules! enum_str {

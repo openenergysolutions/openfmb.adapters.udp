@@ -2,6 +2,7 @@
 
 This UDP OpenFMB Adapter is an plug-in that can translate UDP protocol into OpenFMB.  This is a sample plug-in that demonstrates how to write a plug-in that can be integrated to [OES OpenFMB adapters](https://openfmb.openenergysolutions.com/).
 This sample plug-in uses a fictitious OES plug as an IoT-Ready Plug Control to:
+
 - Read measurement data (Current, Voltage, and Power)
 - Turn on/off
 
@@ -59,14 +60,17 @@ Note the `mac-address` field that is used to identify the OES plug, and then map
 Simple UDP implementation is done in `oes` sub-project
 
 ## OpenFMB Mappings
+
 The mappings from UDP datagrams to OpenFMB data fields are done using a tree traversal and visitor pattern.  See `adapter-util` sub-project for more information.
 
 ## The Adapter
+
 The adapter (main entry of the program) is done in `adapter` sub-project
 
 ## Adapter Configurations
 
 There are configurations to support `switch` profiles.
+
 - adapter.yaml
 - template.yaml
 
@@ -81,6 +85,7 @@ cargo build
 ```bash
 cargo run -- -c adapter.yaml
 ```
+
 ## Docker Build and Run
 
 The `make` command is a convenient way to build and push the docker image to a repository.  Modify the `Makefile` to point to the repository of your choice.  
@@ -100,6 +105,7 @@ docker run -p 8555:8555/udp -v $PWD:/openfmb oesinc/openfmb.adapters.udp -c /ope
 Note that in the `adapter.yaml`, the path of the referencing template needs to be modified when the adapter is running in docker container.
 
 When the adapter is running as a stand-alone app:
+
 ```yaml
 oes-plug:
     enabled: true
@@ -111,6 +117,7 @@ oes-plug:
 ```
 
 When the adapter is running as a docker container where `/openfmb` is the mounted path in the container:
+
 ```yaml
 oes-plug:
     enabled: true
@@ -123,5 +130,5 @@ oes-plug:
 
 ## Contributing
 
-Contributing to the Adapter requires signing a CLA, please email cla@openenergysolutionsinc.com and
+Contributing to the Adapter requires signing a CLA, please email <cla@openenergysolutionsinc.com> and
 request it.

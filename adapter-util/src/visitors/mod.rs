@@ -2,8 +2,8 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 
-pub mod switch;
+mod switch;
 pub use switch::*;
 
-pub mod enums;
+mod enums;
 pub use enums::*;
