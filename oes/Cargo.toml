@@ -2,7 +2,7 @@
 name = "oes"
 version = "0.1.0"
 edition = "2021"
-authors = ["Cory Nguyen <cory@openenergysolutionsinc.com>"]
+authors = ["Cory Nguyen <cory@openenergysolutions.com>"]
 description = "An OES Plug data modeling and helper crate"
 
 [dependencies]
