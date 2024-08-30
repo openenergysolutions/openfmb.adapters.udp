@@ -1,7 +1,7 @@
 [package]
 name = "udp-adapter"
 version = "0.1.0"
-authors = ["Cory Nguyen <cory@openenergysolutionsinc.com>"]
+authors = ["Cory Nguyen <cory@openenergysolutions.com>"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

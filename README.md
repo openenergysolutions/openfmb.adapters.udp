@@ -130,5 +130,5 @@ oes-plug:
 
 ## Contributing
 
-Contributing to the Adapter requires signing a CLA, please email <cla@openenergysolutionsinc.com> and
+Contributing to the Adapter requires signing a CLA, please email <cla@openenergysolutions.com> and
 request it.
